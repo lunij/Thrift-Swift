@@ -124,17 +124,6 @@ public struct TSet<Element : TSerializable & Hashable> : SetAlgebra, Hashable, C
     return storage[bounds]
   }
 
-  
-  /// Mark: Hashable
-  public var hashValue : Int {
-    let prime = 31
-    var result = 1
-    for element in storage {
-      result = prime &* result &+ element.hashValue
-    }
-    return result
-  }
-  
   /// Mark: TSerializable
   public static var thriftType : TType { return .set }
   

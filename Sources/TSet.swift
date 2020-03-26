@@ -20,6 +20,11 @@
 import Foundation
 
 public struct TSet<Element : TSerializable & Hashable> : SetAlgebra, Hashable, Collection, ExpressibleByArrayLiteral, TSerializable {
+  
+  public func makeIterator() -> Storage.Iterator {
+    return storage.makeIterator()
+  }
+  
   /// Typealias for Storage type
   public typealias Storage = Set<Element>
   

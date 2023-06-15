@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.2
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
